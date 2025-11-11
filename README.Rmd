@@ -108,17 +108,3 @@ install.packages(c(
   "ggplot2"       # Static visualizations
 ))
 ```
-
-## Connection to Healthcare Analytics
-
-*This sample demonstrates methodologies directly applicable to:*
-- **Medicaid claims analysis** and quality metric development
-- **Health equity research** through subgroup analysis
-- **HRSN (Health-Related Social Needs) data** integration
-- **Population health analytics** and outcome measurement
-
-The reproducible pipeline and advanced programming techniques shown here scale effectively to large healthcare datasets while maintaining analytical rigor.
-
----
-
-*Developed as a technical portfolio piece for research analyst positions in healthcare and public health research.*
