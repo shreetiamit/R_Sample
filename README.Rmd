@@ -1,0 +1,124 @@
+# Healthcare Data Analysis Sample
+
+A reproducible R analysis portfolio demonstrating advanced statistical programming skills for healthcare data analysis, specifically tailored for research analyst positions.
+
+## Skills Demonstrated
+
+*This sample directly addresses key requirements for Research Analyst and Statistical Programmer roles:*
+
+- **Advanced R Programming**: Higher-order functions, functional programming with `purrr`, custom function development
+- **Statistical Analysis**: Hypothesis testing, bootstrapped confidence intervals, logistic/linear regression, correlation analysis
+- **Healthcare Data Expertise**: Synthetic patient data analysis, clinical variable engineering, data quality validation
+- **Data Visualization**: ggplot2 for static visualizations, plotly for interactive dashboards, professional reporting
+- **Reproducible Research**: Version control (Git), modular code organization, comprehensive documentation
+- **Data Governance**: Data validation pipelines, missing data handling, analysis reproducibility
+
+## Project Structure
+
+```
+R_Sample/
+├── main_analysis.R              # Standalone demonstration of all skills
+├── 01_data_cleaning.R          # Data preprocessing and validation pipeline
+├── 02_analysis.R               # Statistical analysis and modeling
+├── 03_visualization.R          # Data visualization and reporting
+├── functions/
+│   ├── validation.R            # Higher-order functions for data quality
+│   └── data_helpers.R          # Custom analytical functions
+├── data/                       # Generated analysis datasets
+├── output/                     # Results, tables, and visualizations
+└── README.md                   # This file
+```
+
+## Quick Start
+
+### Option 1: Complete Pipeline
+Run the full analysis pipeline in order:
+```r
+source("01_data_cleaning.R")    # Data preparation and validation
+source("02_analysis.R")         # Statistical testing and modeling
+source("03_visualization.R")    # Visualization and reporting
+```
+
+### Option 2: Standalone Demonstration
+Run the comprehensive standalone analysis:
+```r
+source("main_analysis.R")       # Complete skills demonstration
+```
+
+## Analysis Overview
+
+### Data Cleaning & Validation (`01_data_cleaning.R`)
+- Synthetic healthcare dataset generation (1000+ patient records)
+- Advanced data validation using higher-order functions
+- Missing data imputation and quality assessment
+- Feature engineering for clinical variables
+
+### Statistical Analysis (`02_analysis.R`)
+- Descriptive statistics with bootstrapped confidence intervals
+- Hypothesis testing (t-tests, chi-square, correlation analysis)
+- Predictive modeling (logistic and linear regression)
+- Group-wise analysis using functional programming
+
+### Data Visualization (`03_visualization.R`)
+- Clinical distribution plots (age, blood pressure, outcomes)
+- Treatment group comparisons
+- Interactive visualizations with plotly
+- Professional reporting-ready figures
+
+## Technical Implementation
+
+### Advanced R Features Demonstrated
+```r
+# Higher-order functions for data validation
+create_data_validator <- function(checks) {
+  function(df) {
+    purrr::map(checks, ~.x(df))  # Returns validation function
+  }
+}
+
+# Functional programming with purrr
+analysis_results <- purrr::map(variables, ~analyze_variable(.))
+
+# Bootstrapped confidence intervals
+boot_means <- replicate(1000, mean(sample(data, replace = TRUE)))
+```
+
+### Healthcare Data Focus
+- Synthetic Electronic Health Record (EHR) data simulation
+- Clinical variable engineering (blood pressure categories, age groups)
+- Treatment outcome analysis
+- Risk prediction modeling
+
+## Sample Outputs
+
+The analysis generates:
+- **Statistical Summaries**: Bootstrapped confidence intervals, model coefficients
+- **Hypothesis Tests**: Treatment group comparisons, correlation analyses
+- **Visualizations**: Distribution plots, comparative analyses, interactive charts
+- **Model Results**: Logistic regression outputs, predictive performance metrics
+
+## Dependencies
+
+```r
+install.packages(c(
+  "tidyverse",    # Data manipulation and visualization
+  "purrr",        # Functional programming
+  "broom",        # Tidy model outputs
+  "plotly",       # Interactive visualizations
+  "ggplot2"       # Static visualizations
+))
+```
+
+## Connection to Healthcare Analytics
+
+*This sample demonstrates methodologies directly applicable to:*
+- **Medicaid claims analysis** and quality metric development
+- **Health equity research** through subgroup analysis
+- **HRSN (Health-Related Social Needs) data** integration
+- **Population health analytics** and outcome measurement
+
+The reproducible pipeline and advanced programming techniques shown here scale effectively to large healthcare datasets while maintaining analytical rigor.
+
+---
+
+*Developed as a technical portfolio piece for research analyst positions in healthcare and public health research.*
